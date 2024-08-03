@@ -1,4 +1,4 @@
-- hosts: k8s-master
+- hosts: control-plane
   gather_facts: false
   tasks:
   - name: Copy dockercoins.yml to master
