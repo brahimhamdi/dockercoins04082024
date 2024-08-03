@@ -2,7 +2,7 @@
   gather_facts: false
   tasks:
   - name: Deploy dockercoins
-    command: kubectl apply -f /tmp/dockercoins.yaml
+    command: kubectl apply -f dockercoins.yaml
     register: deploy_result 
     tags:
     - deploy_dockercoins
@@ -13,7 +13,7 @@
     tags:
     - display_dockercoins
   - name: Delete dockercoins
-    command: kubectl delete -f /tmp/dockercoins.yaml
+    command: kubectl delete -f dockercoins.yaml
     tags:
     - delete_dockercoins
   
