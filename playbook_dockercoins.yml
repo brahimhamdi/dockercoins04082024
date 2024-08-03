@@ -3,9 +3,8 @@
   tasks:
   - name: copy kubeconfig to jenkins home
     shell: |
-      cp -r /home/vagrant/.kube  /var/lib/jenkins
-      chown -R jenkins:jenkins /var/lib/jenkins/.kube
-    become: true
+      sudo cp -r /home/vagrant/.kube  /var/lib/jenkins
+      sudo chown -R jenkins:jenkins /var/lib/jenkins/.kube
   - name: Deploy dockercoins
     command: kubectl apply -f dockercoins.yaml
     register: deploy_result 
